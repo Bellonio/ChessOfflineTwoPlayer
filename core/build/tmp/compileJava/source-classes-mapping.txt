@@ -1,0 +1,11 @@
+com/bellone/game/Scacchiera.java
+ com.bellone.game.Scacchiera
+com/bellone/game/Impostazioni.java
+ com.bellone.game.Impostazioni
+com/bellone/game/MostraMosseDisponibili.java
+ com.bellone.game.MostraMosseDisponibili
+com/bellone/game/Casella.java
+ com.bellone.game.Casella
+com/bellone/game/MyGdxGame.java
+ com.bellone.game.MyGdxGame
+ com.bellone.game.MyGdxGame$1

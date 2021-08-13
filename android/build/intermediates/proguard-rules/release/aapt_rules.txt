@@ -1,0 +1,2 @@
+# Referenced at /home/giulio/AndroidStudioProjects/Chess_youVSFriend/android/build/intermediates/merged_manifests/release/AndroidManifest.xml:18
+-keep class com.bellone.game.AndroidLauncher { <init>(); }
