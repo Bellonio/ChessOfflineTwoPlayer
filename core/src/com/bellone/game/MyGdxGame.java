@@ -144,7 +144,7 @@ public class MyGdxGame extends ApplicationAdapter {
 
 
 		//Sul mio tel (width = 1080): 180
-		WIDTH_IMPOSTAZIONI = Gdx.graphics.getWidth()/6;
+		WIDTH_IMPOSTAZIONI = (int) (Gdx.graphics.getWidth()/6.5);
 		//Sul mio tel (width = 1080): 20
 		X_IMPOSTAZIONI = Gdx.graphics.getWidth() - WIDTH_IMPOSTAZIONI - (Gdx.graphics.getWidth()/54);
 		Y_IMPOSTAZIONI = Gdx.graphics.getHeight() - WIDTH_IMPOSTAZIONI - (Gdx.graphics.getWidth()/54);
@@ -154,7 +154,7 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		//Sul mio tel (width = 1080): 140x250
 		WIDTH_FRECCE = (int) (Gdx.graphics.getWidth()/7.2);
-		HEIGHT_FRECCE = (int) (WIDTH_FRECCE*1.78);
+		HEIGHT_FRECCE = (int) (WIDTH_FRECCE*1.66);
 		//Sul mio tel (width = 1080): 40
 		X_FRECCIA_SX_TURNO1 = Gdx.graphics.getWidth()/27;
 		X_FRECCIA_C_TURNO1 = Gdx.graphics.getWidth()/2 - WIDTH_FRECCE/2;

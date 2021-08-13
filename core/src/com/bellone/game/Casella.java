@@ -50,8 +50,10 @@ public class Casella {
     public boolean scacco;
 
     public Casella(int num, int posX, int posY, int[] c) {
-        //Sul mio tel (width = 1080): 20
-        WIDTH_PED = (int) (WIDTH_CASELLA - (Gdx.graphics.getWidth()/30.85));
+        //Usavo width_casella - 35
+        //Sul mio tel (width = 1080): width_casella = 115
+        //35 ==> 115/3.28
+        WIDTH_PED = (int) (WIDTH_CASELLA - (WIDTH_CASELLA/3.28));
 
         numCasella = num;
         x = posX;
@@ -161,7 +163,9 @@ public class Casella {
             //Sul mio tel (width = 1080): 12
             sr.rect(x+((float)Gdx.graphics.getWidth()/90),
                     y+((float)Gdx.graphics.getWidth()/90),
-                    WIDTH_CASELLA-24, WIDTH_CASELLA-24);
+                    //Sul mio tel (width = 1080): 24
+                    WIDTH_CASELLA - ((float)Gdx.graphics.getWidth()/45),
+                    WIDTH_CASELLA - ((float)Gdx.graphics.getWidth()/45));
             sr.end();
         }
 
@@ -169,17 +173,27 @@ public class Casella {
             if (mosse) {
                 sr.begin(ShapeRenderer.ShapeType.Filled);
                 sr.setColor(Color.GREEN);
-                int w = 30;
-                sr.rect(getCenterX() - (float)w/2, getCenterY() - (float)w/2, w, w);
+                //Usavo 30
+                //Sul mio tel (width = 1080): width_casella = 115
+                //30 ==> 115/3.83
+                float w = (float) (WIDTH_CASELLA/3.83);
+                sr.rect(getCenterX() - w/2, getCenterY() - w/2, w, w);
                 sr.end();
             } else if (mossaMangia) {
                 sr.begin(ShapeRenderer.ShapeType.Filled);
                 sr.setColor(Color.GREEN);
+                //Usavo 10
+                //Sul mio tel (width = 1080): width_casella = 115
+                //10 ==> 115/11.5
                 //--- sara solo il BORDO ----
-                sr.circle(getCenterX(), getCenterY(), (float)WIDTH_CASELLA/2 - 10);
+                sr.circle(getCenterX(), getCenterY(), (float) (WIDTH_CASELLA/2 -
+                                        (WIDTH_CASELLA/11.5)));
                 //--- nasconde na parte del cerchio per creare il bordo ---
                 sr.setColor(color[0] / 255f, color[1] / 255f, color[2] / 255f, 1);
-                sr.circle(getCenterX(), getCenterY(), (float)WIDTH_CASELLA/2 - 16);
+                //Usavo 16
+                //Sul mio tel (width = 1080): width_casella = 115
+                //16 ==> 115/7.18
+                sr.circle(getCenterX(), getCenterY(), (float) (WIDTH_CASELLA/2 - (WIDTH_CASELLA/7.18)));
                 sr.end();
             }
         }
